@@ -5,11 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sayantan Sengupta | ML Portfolio</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- Smooth scrolling -->
+
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
-      background: radial-gradient(circle at top, #111827, #020617);
+      background: radial-gradient(circle at top, #0f172a, #020617);
     }
   </style>
 
@@ -17,46 +23,89 @@
 
 <body class="text-white font-sans">
 
+<!-- NAVBAR -->
+
+<nav class="fixed top-0 w-full bg-black/30 backdrop-blur border-b border-gray-800 z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+    <h1 class="font-semibold">SS</h1>
+    <div class="space-x-6 text-gray-300">
+      <a href="#projects" class="hover:text-white">Projects</a>
+      <a href="#experience" class="hover:text-white">Experience</a>
+      <a href="#skills" class="hover:text-white">Skills</a>
+    </div>
+  </div>
+</nav>
+
 <!-- HERO -->
 
-<section class="text-center py-24 px-6">
-  <h1 class="text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+<section class="min-h-screen flex items-center justify-center px-6">
+
+  <div class="max-w-6xl grid md:grid-cols-2 gap-12 items-center">
+
+```
+<!-- LEFT -->
+<div>
+  <h1 class="text-5xl md:text-6xl font-bold leading-tight bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
     Sayantan Sengupta
   </h1>
 
-  <p class="text-xl text-gray-400 mt-6">
-    Machine Learning Researcher • Deep Learning • Optimization
+  <p class="mt-6 text-xl text-gray-400">
+    Machine Learning Researcher
   </p>
 
-  <p class="max-w-2xl mx-auto mt-6 text-gray-400 leading-relaxed">
-    PhD in Applied Mathematics building probabilistic models and deep learning systems 
-    for complex, high-dimensional data. Currently developing a GPT-style transformer 
-    from scratch — exploring scaling, training dynamics, and inference behavior.
+  <p class="mt-6 text-gray-400 leading-relaxed">
+    PhD in Applied Mathematics building deep learning and probabilistic models 
+    for complex real-world systems. Currently focused on understanding transformers 
+    by building a GPT-style model from scratch.
   </p>
 
-  <div class="mt-8 flex justify-center gap-6">
-    <a href="mailto:sayantanrock@gmail.com" class="px-5 py-2 bg-blue-600 rounded-lg hover:bg-blue-500 transition">Contact</a>
-    <a href="https://github.com/sayantanrock" class="px-5 py-2 border border-gray-600 rounded-lg hover:bg-gray-800 transition">GitHub</a>
+  <div class="mt-8 flex gap-4">
+    <a href="#projects" class="px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-500 transition">
+      View Projects
+    </a>
+
+    <a href="https://github.com/sayantanrock" class="px-6 py-3 border border-gray-600 rounded-lg hover:bg-gray-800 transition">
+      GitHub
+    </a>
+  </div>
+</div>
+
+<!-- RIGHT (PROFILE IMAGE) -->
+<div class="flex justify-center">
+  <div class="relative">
+
+    <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 blur-2xl opacity-30 rounded-full"></div>
+
+    <img src="profile.jpg" 
+         class="relative w-64 h-64 object-cover rounded-full border-4 border-gray-800 shadow-xl">
+
+  </div>
+</div>
+```
+
   </div>
 </section>
 
 <!-- FEATURED PROJECT -->
 
-<section class="px-6 md:px-20 py-16">
-  <div class="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-gray-700 backdrop-blur">
+<section class="px-6 md:px-20 py-20">
+
+  <div class="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-10 rounded-2xl border border-gray-700 backdrop-blur">
 
 ```
-<h2 class="text-3xl font-bold mb-4">🚀 Featured Project</h2>
+<h2 class="text-3xl font-bold mb-4">Featured Work</h2>
 
-<h3 class="text-2xl font-semibold mb-2">GPT-style Language Model (From Scratch)</h3>
+<h3 class="text-2xl font-semibold mb-4">
+  GPT-style Language Model (From Scratch)
+</h3>
 
 <p class="text-gray-300 max-w-3xl">
-  Implementing a transformer-based language model from first principles — including tokenizer design, 
-  attention mechanisms, and training loop. Focused on understanding scaling laws, loss dynamics, 
-  and efficient inference strategies.
+  Implementing a transformer architecture from first principles — including tokenizer design, 
+  attention mechanisms, and full training pipeline. Exploring scaling laws, optimization behavior, 
+  and inference strategies in modern language models.
 </p>
 
-<div class="mt-4 flex gap-3 flex-wrap">
+<div class="mt-6 flex gap-3 flex-wrap">
   <span class="bg-gray-800 px-3 py-1 rounded-lg">Transformers</span>
   <span class="bg-gray-800 px-3 py-1 rounded-lg">PyTorch</span>
   <span class="bg-gray-800 px-3 py-1 rounded-lg">NLP</span>
@@ -68,39 +117,43 @@
 
 <!-- PROJECTS -->
 
-<section class="px-6 md:px-20 py-16">
-  <h2 class="text-3xl font-bold mb-10">Projects</h2>
+<section id="projects" class="px-6 md:px-20 py-20">
+  <h2 class="text-3xl font-bold mb-12">Projects</h2>
 
   <div class="grid md:grid-cols-2 gap-8">
 
 ```
-<div class="bg-gray-800/60 p-6 rounded-xl border border-gray-700 hover:scale-105 hover:border-blue-500 transition">
-  <h3 class="text-xl font-semibold">Seagrass Detection</h3>
+<div class="group bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:scale-105 hover:border-blue-500 transition duration-300">
+  <h3 class="text-xl font-semibold group-hover:text-blue-400">Seagrass Detection</h3>
   <p class="text-gray-400 mt-2">
-    Real-time computer vision system for detecting and quantifying underwater vegetation.
+    Real-time CV system for underwater vegetation detection and density estimation.
   </p>
-  <a href="https://github.com/sayantanrock/seagrass-coverage-estimation" class="text-blue-400 mt-3 inline-block">View Code →</a>
+  <a href="https://github.com/sayantanrock/seagrass-coverage-estimation" class="text-blue-400 mt-3 inline-block">
+    View Project →
+  </a>
 </div>
 
-<div class="bg-gray-800/60 p-6 rounded-xl border border-gray-700 hover:scale-105 hover:border-purple-500 transition">
-  <h3 class="text-xl font-semibold">Multi-Hypothesis Classifier</h3>
+<div class="group bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:scale-105 hover:border-purple-500 transition duration-300">
+  <h3 class="text-xl font-semibold group-hover:text-purple-400">Multi-Hypothesis Classifier</h3>
   <p class="text-gray-400 mt-2">
-    Ensemble learning system combining multiple classifiers for improved prediction accuracy.
+    Ensemble system combining multiple classifiers for improved predictive performance.
   </p>
 </div>
 
-<div class="bg-gray-800/60 p-6 rounded-xl border border-gray-700 hover:scale-105 hover:border-blue-500 transition">
-  <h3 class="text-xl font-semibold">Optimal Diet Model</h3>
+<div class="group bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:scale-105 hover:border-blue-500 transition duration-300">
+  <h3 class="text-xl font-semibold group-hover:text-blue-400">Optimal Diet Model</h3>
   <p class="text-gray-400 mt-2">
-    Optimization model integrating nutrition, sustainability, and health metrics.
+    Optimization model integrating sustainability, nutrition, and health outcomes.
   </p>
-  <a href="https://optimaldiet.streamlit.app/" class="text-blue-400 mt-3 inline-block">Live Demo →</a>
+  <a href="https://optimaldiet.streamlit.app/" class="text-blue-400 mt-3 inline-block">
+    Live Demo →
+  </a>
 </div>
 
-<div class="bg-gray-800/60 p-6 rounded-xl border border-gray-700 hover:scale-105 hover:border-purple-500 transition">
-  <h3 class="text-xl font-semibold">Bayesian Transfer Learning</h3>
+<div class="group bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:scale-105 hover:border-purple-500 transition duration-300">
+  <h3 class="text-xl font-semibold group-hover:text-purple-400">Bayesian Transfer Learning</h3>
   <p class="text-gray-400 mt-2">
-    Variational Bayesian framework for transfer learning in deep neural networks.
+    Variational Bayesian approach for transfer learning in deep neural networks.
   </p>
 </div>
 ```
@@ -110,8 +163,8 @@
 
 <!-- EXPERIENCE -->
 
-<section class="px-6 md:px-20 py-16">
-  <h2 class="text-3xl font-bold mb-10">Experience</h2>
+<section id="experience" class="px-6 md:px-20 py-20">
+  <h2 class="text-3xl font-bold mb-12">Experience</h2>
 
   <div class="space-y-10 border-l border-gray-700 pl-6">
 
@@ -120,7 +173,7 @@
   <h3 class="text-xl font-semibold">Technical Advisor — OpenHome</h3>
   <p class="text-gray-500">2025 – 2026</p>
   <p class="text-gray-400 mt-2">
-    Led AI strategy discussions, evaluating feasibility and guiding multimodal system design.
+    Guided AI strategy, feasibility, and multimodal system design.
   </p>
 </div>
 
@@ -128,7 +181,7 @@
   <h3 class="text-xl font-semibold">Postdoctoral Researcher — DTU</h3>
   <p class="text-gray-500">2021 – 2025</p>
   <p class="text-gray-400 mt-2">
-    Built optimization models and deployed ML tools for decision-making under uncertainty.
+    Built optimization models and interactive ML applications for decision support.
   </p>
 </div>
 
@@ -136,7 +189,7 @@
   <h3 class="text-xl font-semibold">PhD Researcher — DTU</h3>
   <p class="text-gray-500">2017 – 2021</p>
   <p class="text-gray-400 mt-2">
-    Research in computer vision and probabilistic modeling with real-world applications.
+    Research in computer vision and probabilistic modeling.
   </p>
 </div>
 ```
@@ -146,10 +199,10 @@
 
 <!-- SKILLS -->
 
-<section class="px-6 md:px-20 py-16">
-  <h2 class="text-3xl font-bold mb-10">Skills</h2>
+<section id="skills" class="px-6 md:px-20 py-20">
+  <h2 class="text-3xl font-bold mb-12">Skills</h2>
 
-  <div class="flex flex-wrap gap-3">
+  <div class="flex flex-wrap gap-4">
     <span class="bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 rounded-lg">Python</span>
     <span class="bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 rounded-lg">PyTorch</span>
     <span class="bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 rounded-lg">Transformers</span>
@@ -157,6 +210,7 @@
     <span class="bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 rounded-lg">NLP</span>
     <span class="bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 rounded-lg">Optimization</span>
     <span class="bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 rounded-lg">Statistics</span>
+    <span class="bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 rounded-lg">Docker</span>
   </div>
 </section>
 
