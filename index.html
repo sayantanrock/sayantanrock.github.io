@@ -2,80 +2,81 @@
 
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sayantan Sengupta</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sayantan Sengupta</title>
+<script src="https://cdn.tailwindcss.com"></script>
 
-  <style>
-    body {
-      background: #020617;
-    }
-  </style>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: #020617; }
+</style>
 
 </head>
 
-<body class="text-gray-200 font-sans">
+<body class="text-gray-200 font-sans leading-relaxed">
 
-<!-- HEADER (COMPACT) -->
+<!-- TOP HEADER (compact academic style) -->
 
-<header class="max-w-6xl mx-auto px-6 py-10 flex items-center justify-between">
-
-  <!-- LEFT -->
+<header class="max-w-5xl mx-auto px-6 py-10 flex justify-between items-start">
 
   <div>
     <h1 class="text-3xl font-bold">Sayantan Sengupta</h1>
     <p class="text-gray-400 mt-1">Machine Learning Researcher</p>
 
 ```
-<div class="mt-3 text-sm text-gray-400 space-x-4">
+<p class="text-sm text-gray-400 mt-3 space-x-4">
   <a href="mailto:sayantanrock@gmail.com" class="hover:text-white">Email</a>
   <a href="https://github.com/sayantanrock" class="hover:text-white">GitHub</a>
   <a href="https://linkedin.com/in/sayantanrock" class="hover:text-white">LinkedIn</a>
-</div>
+  <a href="https://scholar.google.dk/citations?hl=da&user=pHCxpbIAAAAJ" class="hover:text-white">Scholar</a>
+</p>
 ```
 
   </div>
 
-  <!-- RIGHT IMAGE -->
-
 <img src="profile.jpg"
-    class="w-24 h-24 object-cover rounded-lg border border-gray-700">
+    class="w-24 h-24 rounded-md object-cover border border-gray-700">
 
 </header>
 
-<!-- SUMMARY -->
+<!-- SUMMARY (tight, research-style) -->
 
-<section class="max-w-6xl mx-auto px-6 pb-8">
-  <p class="text-gray-400 leading-relaxed max-w-3xl">
-    PhD in Applied Mathematics working on probabilistic modeling, deep learning, and optimization.
-    Currently building a GPT-style transformer from scratch to understand training dynamics,
-    scaling laws, and inference behavior in modern language models.
+<section class="max-w-5xl mx-auto px-6 pb-8">
+  <p class="text-gray-400 text-sm">
+    Machine Learning researcher with a focus on probabilistic modeling, optimization, and deep learning for high-dimensional noisy systems.
+    Currently building transformer-based models from scratch to understand how modern language models learn, scale, and generalize.
   </p>
 </section>
 
-<!-- FEATURED PROJECT -->
+<!-- FEATURED WORK (research + media hybrid) -->
 
-<section class="max-w-6xl mx-auto px-6 py-6 border-t border-gray-800">
+<section class="max-w-5xl mx-auto px-6 py-8 border-t border-gray-800">
 
-  <h2 class="text-xl font-semibold mb-4">Featured Project</h2>
+  <h2 class="text-lg font-semibold mb-4">Featured Work</h2>
 
-  <div class="grid md:grid-cols-2 gap-6 items-center">
+  <div class="grid md:grid-cols-2 gap-6 items-start">
 
 ```
 <div>
-  <h3 class="text-lg font-semibold">GPT-style Language Model</h3>
-  <p class="text-gray-400 mt-2 text-sm">
-    Transformer built from scratch including tokenizer, attention mechanism,
-    and full training loop. Exploring optimization and scaling behavior.
+  <h3 class="text-base font-semibold">GPT-style Language Model (From Scratch)</h3>
+  <p class="text-sm text-gray-400 mt-2">
+    Transformer implementation including tokenizer, attention mechanism, and full training pipeline.
+    Focused on training dynamics and scaling behavior.
   </p>
+
+  <div class="mt-3 flex flex-wrap gap-2 text-xs">
+    <span class="bg-gray-800 px-2 py-1 rounded">PyTorch</span>
+    <span class="bg-gray-800 px-2 py-1 rounded">Transformers</span>
+    <span class="bg-gray-800 px-2 py-1 rounded">NLP</span>
+  </div>
 </div>
 
-<!-- OPTIONAL VIDEO -->
+<!-- VIDEO -->
 <div class="aspect-video">
-  <iframe class="w-full h-full rounded-lg"
+  <iframe
+    class="w-full h-full rounded-md border border-gray-800"
     src="https://www.youtube.com/embed/NZkDht-DgbA"
-    frameborder="0"
     allowfullscreen>
   </iframe>
 </div>
@@ -84,83 +85,113 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- PROJECTS (dense grid like research homepage + visuals) -->
 
-<section class="max-w-6xl mx-auto px-6 py-6 border-t border-gray-800">
+<section class="max-w-5xl mx-auto px-6 py-8 border-t border-gray-800">
 
-  <h2 class="text-xl font-semibold mb-4">Projects</h2>
+<h2 class="text-lg font-semibold mb-4">Projects</h2>
 
-  <div class="grid md:grid-cols-2 gap-4">
+<div class="grid md:grid-cols-2 gap-4">
+
+  <!-- PROJECT 1 -->
+
+  <div class="border border-gray-800 rounded-md p-3 hover:border-blue-500 transition">
 
 ```
-<div class="bg-gray-900 p-4 rounded-lg border border-gray-800 hover:border-blue-500 transition">
-  <h3 class="font-semibold">Seagrass Detection</h3>
-  <p class="text-gray-400 text-sm mt-1">
-    Real-time underwater vegetation detection using computer vision.
-  </p>
+<img src="images/seagrass.png" class="rounded mb-3">
+
+<h3 class="text-sm font-semibold">Seagrass Detection</h3>
+<p class="text-xs text-gray-400 mt-1">
+  Real-time computer vision system for underwater vegetation detection and quantification.
+</p>
+
+<div class="mt-2 text-xs">
   <a href="https://github.com/sayantanrock/seagrass-coverage-estimation"
-     class="text-blue-400 text-sm mt-2 inline-block">Code</a>
-</div>
-
-<div class="bg-gray-900 p-4 rounded-lg border border-gray-800 hover:border-purple-500 transition">
-  <h3 class="font-semibold">Multi-Hypothesis Classifier</h3>
-  <p class="text-gray-400 text-sm mt-1">
-    Accuracy is the most important parameter among few others which defines the effectiveness of a machine learning algorithm.
-    Higher accuracy is always desirable. Now, there is a vast number of well established learning algorithms already present in the scientific domain.
-    Each one of them has its own merits and demerits. Merits and demerits are evaluated in terms of accuracy, speed of convergence, complexity of the algorithm,
-    generalization property, and robustness among many others. Also the learning algorithms are data-distribution dependent. Each learning algorithm is suitable
-    for a particular distribution of data. Unfortunately, no dominant classifier exists for all the data distribution, and the data distribution task at hand is
-    usually unknown. Not one classifier can be discriminative well enough if the number of classes are huge. So the underlying problem is that a single classifier
-    is not enough to classify the whole sample space correctly. This thesis is about exploring the different techniques of combining the classifiers so as to obtain the optimal accuracy. 
-  </p>
-</div>
-
-<div class="bg-gray-900 p-4 rounded-lg border border-gray-800 hover:border-blue-500 transition">
-  <h3 class="font-semibold">Optimal Diet Model</h3>
-  <p class="text-gray-400 text-sm mt-1">
-    Optimization framework combining health and sustainability.
-  </p>
-  <a href="https://optimaldiet.streamlit.app/"
-     class="text-blue-400 text-sm mt-2 inline-block">Demo</a>
-</div>
-
-<div class="bg-gray-900 p-4 rounded-lg border border-gray-800 hover:border-purple-500 transition">
-  <h3 class="font-semibold">Bayesian Transfer Learning</h3>
-  <p class="text-gray-400 text-sm mt-1">
-    Variational Bayesian approach for deep learning.
-  </p>
+     class="text-blue-400">Code</a>
 </div>
 ```
 
   </div>
-</section>
 
-<!-- EXPERIENCE -->
+  <!-- PROJECT 2 -->
 
-<section class="max-w-6xl mx-auto px-6 py-6 border-t border-gray-800">
-
-  <h2 class="text-xl font-semibold mb-4">Experience</h2>
-
-  <div class="space-y-4 text-sm">
-    <div>
-      <strong>Technical Advisor — OpenHome</strong>
-      <div class="text-gray-500">2025–2026</div>
-    </div>
+  <div class="border border-gray-800 rounded-md p-3 hover:border-purple-500 transition">
 
 ```
-<div>
-  <strong>Postdoc — DTU</strong>
-  <div class="text-gray-500">2021–2025</div>
-</div>
+<img src="images/diet.png" class="rounded mb-3">
 
-<div>
-  <strong>PhD — DTU</strong>
-  <div class="text-gray-500">2017–2021</div>
+<h3 class="text-sm font-semibold">Optimal Diet Model</h3>
+<p class="text-xs text-gray-400 mt-1">
+  Optimization framework combining nutrition, health impact, and sustainability.
+</p>
+
+<div class="mt-2 text-xs">
+  <a href="https://optimaldiet.streamlit.app/" class="text-blue-400">Demo</a>
 </div>
 ```
 
   </div>
+
+  <!-- PROJECT 3 -->
+
+  <div class="border border-gray-800 rounded-md p-3 hover:border-blue-500 transition">
+
+```
+<h3 class="text-sm font-semibold">Multi-Hypothesis Classifier</h3>
+<p class="text-xs text-gray-400 mt-1">
+  Ensemble learning framework combining multiple models for improved prediction stability.
+</p>
+```
+
+  </div>
+
+  <!-- PROJECT 4 -->
+
+  <div class="border border-gray-800 rounded-md p-3 hover:border-purple-500 transition">
+
+```
+<h3 class="text-sm font-semibold">Bayesian Transfer Learning</h3>
+<p class="text-xs text-gray-400 mt-1">
+  Variational Bayesian deep learning for transfer learning under uncertainty.
+</p>
+```
+
+  </div>
+
+</div>
 </section>
+
+<!-- EXPERIENCE (minimal academic style) -->
+
+<section class="max-w-5xl mx-auto px-6 py-8 border-t border-gray-800">
+
+<h2 class="text-lg font-semibold mb-4">Experience</h2>
+
+<div class="space-y-3 text-sm text-gray-400">
+
+  <div>
+    <span class="text-gray-200">Technical Advisor — OpenHome</span>
+    <span class="text-gray-500"> (2025–2026)</span>
+  </div>
+
+  <div>
+    <span class="text-gray-200">Postdoctoral Researcher — DTU</span>
+    <span class="text-gray-500"> (2021–2025)</span>
+  </div>
+
+  <div>
+    <span class="text-gray-200">PhD Researcher — DTU</span>
+    <span class="text-gray-500"> (2017–2021)</span>
+  </div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+
+<footer class="max-w-5xl mx-auto px-6 py-10 text-xs text-gray-600">
+  © 2026 Sayantan Sengupta
+</footer>
 
 </body>
 </html>
